@@ -45,5 +45,14 @@
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/js.pt"/>
 
+  <!--The Site About viewlet-->
+  <browser:viewlet name="gs-site-home-about"
+    manager=".interfaces.ISiteHomeLeftColumn"
+    template="browser/templates/about.pt"
+    class="gs.viewlet.viewlet.SiteViewlet"
+    permission="zope2.View"
+    weight="10"
+    title="About" />
+
 </configure>
 

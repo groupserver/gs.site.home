@@ -1,0 +1,8 @@
+<div id="gs-site-home-about" 
+  tal:content="structure here/introduction">
+  The About text on the site homepage. 
+  It gets here due to <strong>acquisition.</strong> 
+  Acquisition is a Bad Thing.
+  I should fix this one day.
+</div><!--gs-site-home-about-->
+
