@@ -4,11 +4,46 @@
   xmlns:five="http://namespaces.zope.org/five"
   i18n_domain="groupserver">
 
-<browser:page for="Products.GSContent.interfaces.IGSSiteFolder"
-  name="index.html"
-  class=".sitehomepage.SiteHomepage"
-  template="browser/templates/site_homepage.pt"
-  permission="zope2.View" />
+  <browser:page for="Products.GSContent.interfaces.IGSSiteFolder"
+    name="index.html"
+    class=".sitehomepage.SiteHomepage"
+    template="browser/templates/site_homepage.pt"
+    permission="zope2.View" />
+  
+  <browser:viewletManager
+    name="groupserver.SiteHomeIntroduction"
+    permission="zope2.View"
+    provides=".interfaces.ISiteHomeIntroduction"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/introduction.pt"/>
+
+  <browser:viewletManager
+    name="groupserver.SiteHomeLeftColumn"
+    permission="zope2.View"
+    provides=".interfaces.ISiteHomeLeftColumn"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/left.pt"/>
+
+  <browser:viewletManager
+    name="groupserver.SiteHomeRightColumn"
+    permission="zope2.View"
+    provides=".interfaces.ISiteHomeRightColumn"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/right.pt"/>
+
+  <browser:viewletManager
+    name="groupserver.SiteHomeEpilogue"
+    permission="zope2.View"
+    provides=".interfaces.ISiteHomeEpilogue"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/epilogue.pt"/>
+
+  <browser:viewletManager
+    name="groupserver.SiteHomeJS"
+    permission="zope2.View"
+    provides=".interfaces.ISiteHomeJS"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/js.pt"/>
 
 </configure>
 

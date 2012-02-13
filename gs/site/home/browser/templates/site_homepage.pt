@@ -1,9 +1,45 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  metal:use-macro="context/@@groupserver_site_home_layout/page">
   <head>
-    <title>Site Home</title>
+    <title metal:fill-slot="title">
+      <title tal:replace="view/siteInfo/name">Site Name</title>
+    </title>      
   </head>
   <body>
-    <h1><a href="http://onlinegroups.net">Site Home</h1>
+    <tal:block metal:fill-slot="contextnavigation">&#160;</tal:block>
+    <tal:block metal:fill-slot="body">
+      <tal:block 
+        content="structure provider:groupserver.SiteHomeIntroduction">
+        The introduction 
+      </tal:block>
+      <div class="cols">
+        <div class="rightColumn">
+          <tal:block 
+            content="structure provider:groupserver.SiteHomeRightColumn">
+            The right column, which is before the left column due to 
+            the odd nature of CSS floats.
+          </tal:block>
+        </div><!--rightColumn-->
+        <div class="leftColumn">
+          <tal:block 
+            content="structure provider:groupserver.SiteHomeLeftColumn">
+            The left column.
+          </tal:block>
+        </div><!--leftColumn-->
+      </div><!--cols-->
+      <tal:block 
+        content="structure provider:groupserver.SiteHomeEpilogue">
+        The epilogue.
+      </tal:block>
+    </tal:block>
+    <tal:block metal:fill-slot="javascript">
+      <tal:block 
+        content="structure provider:groupserver.SiteHomeJS">
+        Some useful JavaScript voodoo. All JavaScript is voodoo.
+      </tal:block>
+    </tal:block>
   </body>
 </html>
 

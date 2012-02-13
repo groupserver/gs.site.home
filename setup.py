@@ -32,6 +32,9 @@ setup(name='gs.site.home',
     zip_safe=True,
     install_requires=[
         'setuptools',
+        'gs.content.base',
+        'gs.content.js.jquery',
+        'gs.viewlet',
         # -*- Extra requirements: -*-
     ],
     entry_points="""
