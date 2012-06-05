@@ -14,20 +14,16 @@
         content="structure provider:groupserver.SiteHomeIntroduction">
         The introduction 
       </tal:block>
-      <div class="cols">
-        <div class="rightColumn">
-          <tal:block 
-            content="structure provider:groupserver.SiteHomeRightColumn">
-            The right column, which is before the left column due to 
-            the odd nature of CSS floats.
-          </tal:block>
-        </div><!--rightColumn-->
-        <div class="leftColumn">
-          <tal:block 
-            content="structure provider:groupserver.SiteHomeLeftColumn">
-            The left column.
-          </tal:block>
-        </div><!--leftColumn-->
+      <div id="gs-site-home-main" class="cols">
+        <tal:block 
+           content="structure provider:groupserver.SiteHomeRightColumn">
+          The right column, which is before the left column due to 
+          the odd nature of CSS floats.
+        </tal:block>
+        <tal:block 
+           content="structure provider:groupserver.SiteHomeLeftColumn">
+          The left column.
+        </tal:block>
       </div><!--cols-->
       <tal:block 
         content="structure provider:groupserver.SiteHomeEpilogue">

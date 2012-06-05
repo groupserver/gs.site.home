@@ -1,8 +1,7 @@
-<div id="gs-site-home-left">
+<div id="gs-site-home-left" class="leftColumn">
   <tal:block repeat="viewlet options/viewlets"> 
     <tal:block content="structure viewlet/render">
       Some suff
     </tal:block>
   </tal:block>
 </div><!--gs-site-home-left-->
-

@@ -1,4 +1,5 @@
-<div id="gs-site-home-right">
+<div id="gs-site-home-right"
+     class="rightColumn">
   <tal:block repeat="viewlet options/viewlets"> 
     <tal:block content="structure viewlet/render">
       Some suff
