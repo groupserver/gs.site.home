@@ -9,7 +9,16 @@
     class=".sitehomepage.SiteHomepage"
     template="browser/templates/site_homepage.pt"
     permission="zope2.View" />
+
+  <!--Metadata-->
+  <browser:viewletManager
+    name="groupserver.SiteHomeMetadata"
+    permission="zope2.View"
+    provides=".interfaces.ISiteHomeMetadata"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/simplemanager.pt"/>
   
+  <!--body-->
   <browser:viewletManager
     name="groupserver.SiteHomeIntroduction"
     permission="zope2.View"
@@ -30,7 +39,22 @@
     provides=".interfaces.ISiteHomeRightColumn"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/right.pt"/>
-
+  <!--The tabs appear in the right-hand column-->
+  <browser:viewlet 
+    name="gs-site-home-activity"
+    manager=".interfaces.ISiteHomeRightColumn"
+    template="browser/templates/tabs-viewlet.pt"
+    class="gs.viewlet.viewlet.SiteViewlet"
+    permission="zope2.View"
+    weight="10"
+    title="Tabs" />
+  <browser:viewletManager
+    name="groupserver.SiteHomeActivity"
+    permission="zope2.View"
+    provides=".interfaces.ISiteHomeActivity"
+    class="gs.viewlet.manager.WeightOrderedViewletManager"
+    template="browser/templates/tabs.pt"/>
+    
   <browser:viewletManager
     name="groupserver.SiteHomeEpilogue"
     permission="zope2.View"
@@ -38,12 +62,22 @@
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/epilogue.pt"/>
 
+  <!--JavaScript-->
   <browser:viewletManager
     name="groupserver.SiteHomeJS"
     permission="zope2.View"
     provides=".interfaces.ISiteHomeJS"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/js.pt"/>
+
+  <browser:viewlet
+    name="gs-site-home-activity-javascript"
+    manager=".interfaces.ISiteHomeJS"
+    template="browser/templates/tabs-js.pt"
+    class="gs.viewlet.viewlet.SiteViewlet"
+    permission="zope2.View"
+    weight="10"
+    title="Tabs JavaScript" />
 
   <!--The Site About viewlet-->
   <browser:viewlet name="gs-site-home-about"

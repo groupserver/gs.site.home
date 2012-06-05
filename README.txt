@@ -21,10 +21,10 @@ viewlet manager. Five are visible in the body of the page:
 ``ISiteHomeRightColumn``:
   The right column, which is normally used for dynamic information.
 
-``ISiteHomeTabs``: 
-  Some *tabs*, which are very similar to the Tabs shown on the Group page
-  [#group]_. The tabs are contained within the right-hand column of the
-  site homepage.
+``ISiteHomeActity``: 
+  The activity on the site. These are shown as *tabs*, which are very
+  similar to the Tabs shown on the Group page [#group]_. The tabs are
+  contained within the right-hand column of the site homepage.
 
 ``ISiteHomeEpilogue``:
   Unimportant information that appears at the bottom of the page.

@@ -1,0 +1,4 @@
+<p id="gs-site-home-activity"
+   tal:replace="structure provider:groupserver.SiteHomeActivity">
+  The task tabs.
+</p>
