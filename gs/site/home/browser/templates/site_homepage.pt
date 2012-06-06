@@ -5,7 +5,12 @@
   <head>
     <title metal:fill-slot="title">
       <title tal:replace="view/siteInfo/name">Site Name</title>
-    </title>      
+    </title>
+    <tal:block 
+      metal:fill-slot="metadata"
+      replace="structure provider:groupserver.SiteHomeMetadata">
+      The metadata for the site home page.
+    </tal:block>
   </head>
   <body>
     <tal:block metal:fill-slot="contextnavigation">&#160;</tal:block>
