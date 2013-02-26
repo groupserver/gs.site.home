@@ -1,8 +1,0 @@
-<script src="/++resource++jquery-ui-1.8.9.custom.min.js" 
-        type="text/javascript">&#160;</script>
-<script type="text/javascript">
-  jQuery.noConflict()
-  jQuery(document).ready( function () {
-      jQuery("#gs-site-home-activity-tabs").tabs();
-  });
-</script>        

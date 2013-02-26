@@ -35,7 +35,7 @@
     permission="zope2.View"
     provides=".interfaces.ISiteHomeLeftColumn"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/left.pt"/>
+    template="browser/templates/simplemanager.pt"/>
 
   <browser:viewletManager
     name="groupserver.SiteHomeRightColumn"
@@ -43,7 +43,7 @@
     permission="zope2.View"
     provides=".interfaces.ISiteHomeRightColumn"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/right.pt"/>
+    template="browser/templates/simplemanager.pt"/>
   <!--The tabs appear in the right-hand column-->
   <browser:viewlet 
     name="gs-site-home-activity"
@@ -78,16 +78,6 @@
     provides=".interfaces.ISiteHomeJS"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/js.pt"/>
-
-  <browser:viewlet
-    name="gs-site-home-activity-javascript"
-    for="Products.GSContent.interfaces.IGSSiteFolder"
-    manager=".interfaces.ISiteHomeJS"
-    template="browser/templates/tabs-js.pt"
-    class="gs.viewlet.viewlet.SiteViewlet"
-    permission="zope2.View"
-    weight="10"
-    title="Tabs JavaScript" />
 
   <!--The Site About viewlet-->
   <browser:viewlet name="gs-site-home-about"

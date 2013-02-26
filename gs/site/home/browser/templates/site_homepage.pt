@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
   xmlns:tal="http://xml.zope.org/namespaces/tal"
   xmlns:metal="http://xml.zope.org/namespaces/metal"
-  metal:use-macro="context/@@groupserver_site_home_layout/page">
+  metal:use-macro="context/@@groupserver_layout/page">
   <head>
     <title metal:fill-slot="title">
       <title tal:replace="view/siteInfo/name">Site Name</title>
@@ -13,28 +13,27 @@
     </tal:block>
   </head>
   <body>
-    <tal:block metal:fill-slot="contextnavigation">&#160;</tal:block>
-    <tal:block metal:fill-slot="body">
+    <div id="gs-site-home" metal:fill-slot="body" role="main">
       <tal:block 
         content="structure provider:groupserver.SiteHomeIntroduction">
         The introduction 
       </tal:block>
-      <div id="gs-site-home-main" class="cols">
-        <tal:block 
-           content="structure provider:groupserver.SiteHomeRightColumn">
+      <div id="gs-site-home-main" class="gs-content-layout-cols">
+        <div class="main" 
+             tal:content="structure provider:groupserver.SiteHomeRightColumn">
+          The left column.
+        </div><!--main-->
+        <div class="secondary small"
+             tal:content="structure provider:groupserver.SiteHomeLeftColumn">
           The right column, which is before the left column due to 
           the odd nature of CSS floats.
-        </tal:block>
-        <tal:block 
-           content="structure provider:groupserver.SiteHomeLeftColumn">
-          The left column.
-        </tal:block>
-      </div><!--cols-->
+        </div><!--secondary-->
+      </div><!--gs-site-home-main-->
       <tal:block 
         content="structure provider:groupserver.SiteHomeEpilogue">
         The epilogue.
       </tal:block>
-    </tal:block>
+    </div><!--gs-site-home-->
     <tal:block metal:fill-slot="javascript">
       <tal:block 
         content="structure provider:groupserver.SiteHomeJS">
