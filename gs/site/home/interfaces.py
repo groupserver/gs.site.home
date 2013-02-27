@@ -9,11 +9,11 @@ class ISiteHomeMetadata(IViewletManager):
 class ISiteHomeIntroduction(IViewletManager):
     '''The initial text, which is considered very important.'''
 
-class ISiteHomeLeftColumn(IViewletManager):
+class ISiteHomeMain(IViewletManager):
     '''The left column, which is normally used for static data.'''
 
-class ISiteHomeRightColumn(IViewletManager):
-    '''The right column, which is normally used for dynamic information.'''
+class ISiteHomeSecondary(IViewletManager):
+    '''The left column, which is normally used for static data.'''
 
 class ISiteHomeActivity(IViewletManager):
     '''Some tabs, which are very similar to the Tabs shown on the Group page.'''
@@ -25,3 +25,12 @@ class ISiteHomeEpilogue(IViewletManager):
 class ISiteHomeJS(IViewletManager):
     '''The JavaScript text for the site homepage'''
 
+
+
+
+
+class ISiteHomeLeftColumn(IViewletManager):
+    '''The left column, which is normally used for static data.'''
+
+class ISiteHomeRightColumn(IViewletManager):
+    '''The left column, which is normally used for static data.'''

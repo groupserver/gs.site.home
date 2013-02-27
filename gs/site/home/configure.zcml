@@ -30,29 +30,29 @@
     template="browser/templates/introduction.pt"/>
 
   <browser:viewletManager
-    name="groupserver.SiteHomeLeftColumn"
+    name="groupserver.SiteHomeSecondary"
     for="Products.GSContent.interfaces.IGSSiteFolder"
     permission="zope2.View"
-    provides=".interfaces.ISiteHomeLeftColumn"
+    provides=".interfaces.ISiteHomeSecondary"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/simplemanager.pt"/>
 
   <browser:viewletManager
-    name="groupserver.SiteHomeRightColumn"
+    name="groupserver.SiteHomeMain"
     for="Products.GSContent.interfaces.IGSSiteFolder"
     permission="zope2.View"
-    provides=".interfaces.ISiteHomeRightColumn"
+    provides=".interfaces.ISiteHomeMain"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
     template="browser/templates/simplemanager.pt"/>
   <!--The tabs appear in the right-hand column-->
   <browser:viewlet 
     name="gs-site-home-activity"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    manager=".interfaces.ISiteHomeRightColumn"
+    manager=".interfaces.ISiteHomeMain"
     template="browser/templates/tabs-viewlet.pt"
     class="gs.viewlet.viewlet.SiteViewlet"
     permission="zope2.View"
-    weight="10"
+    weight="20"
     title="Tabs" />
   <browser:viewletManager
     name="groupserver.SiteHomeActivity"
@@ -82,7 +82,7 @@
   <!--The Site About viewlet-->
   <browser:viewlet name="gs-site-home-about"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    manager=".interfaces.ISiteHomeLeftColumn"
+    manager=".interfaces.ISiteHomeSecondary"
     template="browser/templates/about.pt"
     class="gs.viewlet.viewlet.SiteViewlet"
     permission="zope2.View"

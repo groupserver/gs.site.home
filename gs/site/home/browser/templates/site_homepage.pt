@@ -20,11 +20,11 @@
       </tal:block>
       <div id="gs-site-home-main" class="gs-content-layout-cols">
         <div class="main" 
-             tal:content="structure provider:groupserver.SiteHomeRightColumn">
+             tal:content="structure provider:groupserver.SiteHomeMain">
           The left column.
         </div><!--main-->
         <div class="secondary small"
-             tal:content="structure provider:groupserver.SiteHomeLeftColumn">
+             tal:content="structure provider:groupserver.SiteHomeSecondary">
           The right column, which is before the left column due to 
           the odd nature of CSS floats.
         </div><!--secondary-->
