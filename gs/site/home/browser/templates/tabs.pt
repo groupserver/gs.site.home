@@ -3,8 +3,8 @@
     <tal:block repeat="viewlet options/viewlets">
       <li>
         <a href="#" data-toggle="tab"
-           tal:attributes="href string:#gs-site-home-activity-tabs-tab-${repeat/viewlet/index}"
-          tal:content="viewlet/title">Tab Text</a>
+           tal:attributes="href string:#gs-site-home-activity-tabs-tab-${repeat/viewlet/index}">
+          <h2 tal:content="viewlet/title">Tab Text</h2></a>
       </li>
     </tal:block>
   </ul>
