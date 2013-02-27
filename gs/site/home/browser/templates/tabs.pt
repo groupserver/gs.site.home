@@ -1,8 +1,8 @@
-<div id="gs-site-home-activity-tabs">
-  <ul class="nav nav-tabs">
+<div id="gs-site-home-activity-tabs" role="presentation">
+  <ul class="nav nav-tabs" role="tablist">
     <tal:block repeat="viewlet options/viewlets">
       <li>
-        <a href="#" 
+        <a href="#" data-toggle="tab"
            tal:attributes="href string:#gs-site-home-activity-tabs-tab-${repeat/viewlet/index}"
           tal:content="viewlet/title">Tab Text</a>
       </li>
@@ -10,7 +10,7 @@
   </ul>
   <div class="tab-content">
     <tal:block repeat="viewlet options/viewlets">
-      <div class="tab-pane"
+      <div class="tab-pane" role="tabpanel"
            tal:attributes="id string:gs-site-home-activity-tabs-tab-${repeat/viewlet/index}" 
            tal:content="structure viewlet/render">
         Tab Content
