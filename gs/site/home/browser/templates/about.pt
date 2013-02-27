@@ -1,5 +1,6 @@
-<div id="gs-site-home-about" >
-  <h3>About</h3>
+<div id="gs-site-home-about" role="region" 
+     aria-labelledby="gs-site-home-about-h">
+  <h3 id="gs-site-home-about-h">About</h3>
   <tal:block content="structure here/introduction">
     The About text on the site homepage. 
     It gets here due to <strong>acquisition.</strong> 
