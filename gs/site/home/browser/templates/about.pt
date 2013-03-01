@@ -1,11 +1,18 @@
-<div id="gs-site-home-about" role="region" 
+<div id="gs-site-home-about" role="region" class="gs-content-js-more"
      aria-labelledby="gs-site-home-about-h">
   <h3 id="gs-site-home-about-h">About</h3>
-  <tal:block content="structure here/introduction">
+  <div class="gs-content-js-more-content gs-content-js-more-content-small"
+       tal:content="structure here/introduction">
     The About text on the site homepage. 
     It gets here due to <strong>acquisition.</strong> 
     Acquisition is a Bad Thing.
     I should fix this one day.
-  </tal:block>
+  </div><!--gs-content-js-more-content-->
+  <p class="gs-content-js-more-buttons">
+    <a class="gs-content-js-more-buttons-more"
+       href="#">More</a>
+    <a class="gs-content-js-more-buttons-less"
+       href="#"><span class="minor">Less</span></a>
+  </p><!--gs-content-js-more-buttons-->
 </div><!--gs-site-home-about-->
 

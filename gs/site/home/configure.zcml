@@ -88,6 +88,19 @@
     permission="zope2.View"
     weight="10"
     title="About" />
+  <browser:viewlet 
+    name="gs-site-home-about-js"
+    for="Products.GSContent.interfaces.IGSSiteFolder"
+    manager=".interfaces.ISiteHomeJS"
+    template="browser/templates/about-js.pt"
+    class="gs.viewlet.viewlet.SiteViewlet"
+    permission="zope2.View"
+    weight="10"
+    title="About Script" />
+  <browser:resource 
+    name="gs-site-home-about-20130301.js"
+    file="browser/javascript/about.js"
+    permission="zope2.Public" />
 
 </configure>
 
