@@ -107,8 +107,7 @@ Resources
 .. _Creative Commons Attribution-Share Alike 3.0 New Zealand License:
    http://creativecommons.org/licenses/by-sa/3.0/nz/
 .. _GroupServer: http://groupserver.org/
-(END)
-
+.. _OnlineGroups.net: http://onlinegroups.net/
 
 .. [#group] See `the Group Page product 
             <http://source.iopen.net/groupserver/gs.group.home/>`_ 
