@@ -24,13 +24,3 @@ class ISiteHomeEpilogue(IViewletManager):
 # JavaScript
 class ISiteHomeJS(IViewletManager):
     '''The JavaScript text for the site homepage'''
-
-
-
-
-
-class ISiteHomeLeftColumn(IViewletManager):
-    '''The left column, which is normally used for static data.'''
-
-class ISiteHomeRightColumn(IViewletManager):
-    '''The left column, which is normally used for static data.'''
