@@ -11,7 +11,7 @@
   <div class="tab-content">
     <tal:block repeat="viewlet options/viewlets">
       <div class="tab-pane" role="tabpanel"
-           tal:attributes="id string:gs-site-home-activity-tabs-tab-${repeat/viewlet/index}" 
+           tal:attributes="id string:gs-site-home-activity-tabs-tab-${repeat/viewlet/index}"
            tal:content="structure viewlet/render">
         Tab Content
       </div><!--tab-pane-->

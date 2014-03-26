@@ -1,12 +1,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:tal="http://xml.zope.org/namespaces/tal"
-  xmlns:metal="http://xml.zope.org/namespaces/metal"
-  metal:use-macro="context/@@groupserver_layout/page">
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="context/@@groupserver_layout/page">
   <head>
     <title metal:fill-slot="title">
       <title tal:replace="view/siteInfo/name">Site Name</title>
     </title>
-    <tal:block 
+    <tal:block
       metal:fill-slot="metadata"
       replace="structure provider:groupserver.SiteHomeMetadata">
       The metadata for the site home page.
@@ -14,32 +14,31 @@
   </head>
   <body>
     <div id="gs-site-home" metal:fill-slot="body" role="main">
-      <tal:block 
+      <tal:block
         content="structure provider:groupserver.SiteHomeIntroduction">
-        The introduction 
+        The introduction
       </tal:block>
       <div id="gs-site-home-main" class="gs-content-layout-cols">
-        <div class="main" 
+        <div class="main"
              tal:content="structure provider:groupserver.SiteHomeMain">
           The left column.
         </div><!--main-->
         <div class="secondary small"
              tal:content="structure provider:groupserver.SiteHomeSecondary">
-          The right column, which is before the left column due to 
+          The right column, which is before the left column due to
           the odd nature of CSS floats.
         </div><!--secondary-->
       </div><!--gs-site-home-main-->
-      <tal:block 
+      <tal:block
         content="structure provider:groupserver.SiteHomeEpilogue">
         The epilogue.
       </tal:block>
     </div><!--gs-site-home-->
     <tal:block metal:fill-slot="javascript">
-      <tal:block 
+      <tal:block
         content="structure provider:groupserver.SiteHomeJS">
         Some useful JavaScript voodoo. All JavaScript is voodoo.
       </tal:block>
     </tal:block>
   </body>
 </html>
-

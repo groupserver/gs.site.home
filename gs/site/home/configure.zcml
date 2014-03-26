@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<configure xmlns="http://namespaces.zope.org/zope"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns:five="http://namespaces.zope.org/five"
-  i18n_domain="groupserver">
+<!-- Copyright © 2013, 2014 OnlineGroups.net and Contributors. -->
+<!-- All Rights Reserved. -->
 
-  <browser:page 
-    for="Products.GSContent.interfaces.IGSSiteFolder"
+<!-- This software is subject to the provisions of the Zope Public -->
+<!-- License, Version 2.1 (ZPL).  A copy of the ZPL should accompany this -->
+<!-- distribution. -->
+
+<!-- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED -->
+<!-- WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED -->
+<!-- WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND -->
+<!-- FITNESS FOR A PARTICULAR PURPOSE. -->
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           i18n_domain="groupserver">
+
+  <include package="zope.viewlet" file="meta.zcml" />
+
+  <browser:page
     name="index.html"
+    for="Products.GSContent.interfaces.IGSSiteFolder"
     class=".sitehomepage.SiteHomepage"
     template="browser/templates/site_homepage.pt"
     permission="zope2.View" />
@@ -15,69 +27,67 @@
   <browser:viewletManager
     name="groupserver.SiteHomeMetadata"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    permission="zope2.View"
     provides=".interfaces.ISiteHomeMetadata"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/simplemanager.pt"/>
-  
+    template="browser/templates/simplemanager.pt"
+    permission="zope2.View" />
+
   <!--body-->
   <browser:viewletManager
     name="groupserver.SiteHomeIntroduction"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    permission="zope2.View"
     provides=".interfaces.ISiteHomeIntroduction"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/introduction.pt"/>
+    template="browser/templates/introduction.pt"
+    permission="zope2.View" />
 
   <browser:viewletManager
     name="groupserver.SiteHomeSecondary"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    permission="zope2.View"
     provides=".interfaces.ISiteHomeSecondary"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/simplemanager.pt"/>
+    template="browser/templates/simplemanager.pt"
+    permission="zope2.View" />
 
   <browser:viewletManager
     name="groupserver.SiteHomeMain"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    permission="zope2.View"
     provides=".interfaces.ISiteHomeMain"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/simplemanager.pt"/>
+    template="browser/templates/simplemanager.pt"
+    permission="zope2.View" />
   <!--The tabs appear in the right-hand column-->
-  <browser:viewlet 
+  <browser:viewlet
     name="gs-site-home-activity"
     for="Products.GSContent.interfaces.IGSSiteFolder"
     manager=".interfaces.ISiteHomeMain"
-    template="browser/templates/tabs-viewlet.pt"
     class="gs.viewlet.SiteViewlet"
+    template="browser/templates/tabs-viewlet.pt"
     permission="zope2.View"
     weight="20"
     title="Tabs" />
   <browser:viewletManager
     name="groupserver.SiteHomeActivity"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    permission="zope2.View"
     provides=".interfaces.ISiteHomeActivity"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/tabs.pt"/>
-    
+    template="browser/templates/tabs.pt"
+    permission="zope2.View" />
+
   <browser:viewletManager
     name="groupserver.SiteHomeEpilogue"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    permission="zope2.View"
     provides=".interfaces.ISiteHomeEpilogue"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/epilogue.pt"/>
+    template="browser/templates/epilogue.pt"
+    permission="zope2.View" />
 
   <!--JavaScript-->
   <browser:viewletManager
     name="groupserver.SiteHomeJS"
     for="Products.GSContent.interfaces.IGSSiteFolder"
-    permission="zope2.View"
     provides=".interfaces.ISiteHomeJS"
     class="gs.viewlet.manager.WeightOrderedViewletManager"
-    template="browser/templates/js.pt"/>
-
+    template="browser/templates/js.pt"
+    permission="zope2.View" />
 </configure>
-
